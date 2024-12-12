@@ -29,42 +29,53 @@
             color: blue;
         }
     </style>
-	<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WRL844KC');</script>
-<!-- End Google Tag Manager -->
-	<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" src="https://js-eu1.hs-scripts.com/25055848.js"></script>
-<!-- End of HubSpot Embed Code -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WRL844KC');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" src="https://js-eu1.hs-scripts.com/25055848.js"></script>
+    <!-- End of HubSpot Embed Code -->
 </head>
-	
+
 <body>
-	<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRL844KC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRL844KC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <h1>Link Click Demo</h1>
     <a href="#" onclick="buttonOneClicked(); return false;">Link 1</a>
     <a href="#" onclick="buttonTwoClicked(); return false;">Link 2</a>
 
     <div id="output"></div>
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    portalId: "43692370",
-    formId: "53071e68-8b08-4fae-ac9d-35b0c641d262"
-  });
-</script>
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
     <script>
+      hbspt.forms.create({
+        portalId: "43692370",
+        formId: "53071e68-8b08-4fae-ac9d-35b0c641d262"
+      });
+    </script>
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Modified functions to include cookie setting
         function buttonOneClicked() {
             document.getElementById('output').innerText = "Link 1 was clicked!";
+            setCookie('testcookie', 'testvalue', 7); // Set cookie for 7 days
         }
 
         function buttonTwoClicked() {
             document.getElementById('output').innerText = "Link 2 was clicked!";
+            setCookie('testcookie', 'testvalue', 7); // Set cookie for 7 days
         }
     </script>
 </body>
