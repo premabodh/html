@@ -69,8 +69,9 @@
 
         // Modified functions to include cookie setting
         function buttonOneClicked() {
-            document.getElementById('output').innerText = "Link 1 was clicked!";
             setCookie('testcookie', 'testvalue', 7); // Set cookie for 7 days
+            document.getElementById('output').innerText = "Link 1 was clicked!";
+            
         }
 
         function buttonTwoClicked() {
