@@ -51,20 +51,13 @@
     <a href="#" onclick="buttonTwoClicked(); return false;">Link 2</a>
 
     <div id="output"></div>
-    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-    <script>
-      hbspt.forms.create({
-        portalId: "43692370",
-        formId: "53071e68-8b08-4fae-ac9d-35b0c641d262",
-          ",
-            onFormSubmit: function() {
-                const date = new Date();
-            date.setTime(date.getTime() + (15 * 24 * 60 * 60 * 1000));
-            const expires = "expires=" + date.toUTCString();
-            document.cookie = 'testcookieHub' + "=" + 'testcookiehubvalue' + ";" + expires + ";path=/";
-            }
-      });
-    </script>
+   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    portalId: "43692370",
+    formId: "53071e68-8b08-4fae-ac9d-35b0c641d262"
+  });
+</script>
     <script>
         // Function to set a cookie
         function setCookie(name, value, days) {
