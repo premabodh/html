@@ -55,7 +55,14 @@
     <script>
       hbspt.forms.create({
         portalId: "43692370",
-        formId: "53071e68-8b08-4fae-ac9d-35b0c641d262"
+        formId: "53071e68-8b08-4fae-ac9d-35b0c641d262",
+          ",
+            onFormSubmit: function() {
+                const date = new Date();
+            date.setTime(date.getTime() + (15 * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = 'testcookieHub' + "=" + 'testcookiehubvalue' + ";" + expires + ";path=/";
+            }
       });
     </script>
     <script>
